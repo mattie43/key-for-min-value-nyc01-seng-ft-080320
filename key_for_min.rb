@@ -3,11 +3,6 @@
 
 def key_for_min_value(name_hash)
   key, value = name_hash.first
-  puts value
-  name_hash.each do |k,v|
-    if v < value
-      key = k
-    end
-  end
+  name_hash.each { |k,v| key = k if v < value }
   key
 end
